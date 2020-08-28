@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------
+* common
+---------------------------------*/
+.lower-inner{
+  width: 88%;
+  padding-top: 130px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.lower-text{
+  padding-bottom: 40px;
+}
+/*--------------------------------
+* movie
+---------------------------------*/
+.movie-title{
+  font-size:1.8rem;
+  padding-bottom: 20px;
+}
+.movie-icon{
+  display: inline-block;
+  background-color: #daa47b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.movie-icon i{
+  display: block;
+  color:#fff;
+  font-size:3rem;
+  line-height: 50px;
+  position: relative;
+  right:-2px;
+}
+/*coming soon!!!!!!!!!*/
+.iframe-movie{
+  display: none;
+}
+.youtube-movie{
+  background-color: #000;
+  opacity: .6;
+  position: relative;
+}
+.youtube-movie::after{
+  content:'Coming Soon !';
+  color:#fff;
+  font-size:2.2rem;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  
+}
+/*--------------------------------
+* how to
+---------------------------------*/
+#link-upload{
+  padding-top: 180px;
+  margin-top: -180px;
+}
+#link-howto{
+  padding-top: 60px;
+  margin-top: -60px;
+}
+.howto , .upload{
+  width: 100%;
+  margin: 0 auto 130px;
+  border:solid 15px #ede7df;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+.btn-link_wrap{
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.btn-link>a{
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border-color: #0accc4;
+  margin-bottom: 20px;
+}
+.btn-link>a:hover{
+  background-color: #0accc4;
+  border:#0accc4;
+}
+.btn-link a i{
+  margin-left: 10px;
+}
+.howto-h{
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 auto 50px;
+  letter-spacing: .3em;
+  background: linear-gradient(transparent 50%, #0accc4 0%);
+  /*linear-gradient(transparent 線の太さ, 線の色 0%)*/
+  padding: 0 10px;
+}
+.howto-number{
+  font-size:2rem;
+  color:#0accc4;
+  font-family: 'Rock Salt', cursive;
+  margin-right: 20px;
+}
+.howto-text{
+ margin-left: 50px; 
+}
+.howto-title{
+  font-size:1.5rem;
+  font-weight: 500;
+}
+.howto-list{
+  padding-bottom: 30px;
+  border-bottom:solid 1px #ccc;
+  margin-bottom: 30px;
+}
+.howto-list:last-of-type{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.howto-list>.howto-check{
+  padding-bottom: 5px;
+}
+.howto-list i{
+  margin-right: 10px;
+}
+.howto-img{
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.howto-img p{
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.howto-check{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.giga-web{
+  display: block;
+}
+/*アップロード*/
+.upload-img{
+  width: 100%;
+}
+.upload-list{
+  padding-bottom: 35px;
+  border-bottom: solid 1px #ccc;
+  margin-bottom: 35px;
+}
+.upload-list:last-of-type{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.upload-text{
+  padding-bottom: 20px;
+}
+.upload-text p{
+  padding-top: 10px;
+}
+
+/*faqアコーディオン*/
+.faq-en{
+  font-size:2rem;
+  font-weight: 500;
+  margin-right: 15px;
+  color:#daa47b;
+}
+.faq-title{
+  width: 75%;
+  font-weight: 500;
+}
+.accordion-container {
+  position: relative;
+  width: 100%;
+  border-top: none;
+  outline: 0;
+  cursor: pointer;
+}
+.accordion-container .accordion-title {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-weight: normal;
+  color: #000;
+  font-size:1.6rem;
+  cursor: pointer;
+  border-bottom:solid 1px #f4d4bc;
+}
+.accordion-title{
+  position: relative;
+}
+.accordion-title:after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #000;
+  border-right: solid 2px #000;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.accordion-text{
+   display: flex; 
+}
+.accordion-title.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+.accordion-content{
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  box-sizing: border-box;
+}
+.howto-faq{
+  padding-bottom: 60px;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+/*--------------------------------
+* entry
+---------------------------------*/
+.entry-inner{
+  padding-bottom: 140px;
+}
+.entry-h{
+  font-size:1.8rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.entry-text{
+  padding-bottom: 40px;
+}
+.bar-title_entry{
+  font-size:1.6rem;
+}
+.bar-title_entry::before , .bar-title_entry::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 35px;
+  height: 2px;
+  background-color: #d18d5a;
+}
+.bar-title_entry::before{
+  left:-33px;
+}
+.bar-title_entry::after{
+  right:-33px;
+}
+.bar-entry_wrap{
+  padding-bottom: 40px;
+}
+.entry-wrap{
+  position: relative;
+}
+.entry-square{
+  background-color: #fff;
+  border: solid 2px #d18d5a;
+  border-radius: 10px;
+  padding: 40px 15px;
+  margin-bottom: 60px;
+}
+.entry-check{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border:solid 1px #d18d5a;
+  text-align: center;
+}
+.entry-check i{
+  color:#d18d5a;
+}
+.entry-check_text{
+  width: 80%;
+}
+.entry-check_list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.entry-check_list:last-of-type{
+  padding-bottom: 0;
+}
+/*tb以上*/
+@media screen and (min-width: 768px) {
+  /*--------------------------------
+  * common
+  ---------------------------------*/
+  .lower-inner{
+    padding-top: 170px;
+  } 
+  /*--------------------------------
+  * how to
+  ---------------------------------*/
+  .btn-link_wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+  .btn-link>a{
+    width: 200px;
+  }
+  /*録画手順*/
+  .howto-img{
+    width: 80%;
+  }
+  .howto, .upload{
+    padding: 60px 40px;
+  }
+  .howto-number{
+    margin-right: 40px;
+    font-size:2.2rem;
+  }
+  .howto-text{
+    margin-left: 65px;
+  }
+  /*アップロード手順*/
+  .upload-img{
+    width: 250px;
+    text-align: center;
+  }
+  .upload-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  .upload-list{
+    width: 45%;
+  }
+  .upload-list:last-of-type{
+    width: 100%;
+  }
+  .upload-text{
+    width: 80%;
+    height: 120px;
+  }
+  .upload-text_last{
+    height: 60px;
+  }
+  .upload-list{
+    border-bottom: none;
+    padding-bottom: 80px;
+    margin-bottom: 0;
+  }
+  /*--------------------------------
+  * entry
+  ---------------------------------*/
+  .bar-title_entry::before, .bar-title_entry::after{
+    width: 120px;
+  }
+  .bar-title_entry::before{
+    left:-120px;
+  } 
+  .bar-title_entry::after{
+    right:-120px;
+  }
+  /*--------------------------------
+  * movie
+  ---------------------------------*/
+  .youtube-movie::after{
+    font-size:4rem;
+  }
+  
+}
+  
+  /*1024 以上*/
+  @media screen and (min-width: 1024px) {
+    /*--------------------------------
+    * commoc
+    ---------------------------------*/
+    .lower-inner{
+      width: 65%;
+    }
+    .lower-text{
+      padding-bottom: 60px;
+    }
+    /*--------------------------------
+    * how to
+    ---------------------------------*/
+    .btn-link>a{
+      width: 250px;
+    }
+    .btn-link_wrap{
+      padding-bottom: 80px;
+    }
+    .howto-img{
+      width: 60%;
+    }
+    .howto ul{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .upload-flex{
+      width: 80%;
+      margin: 0 auto;
+    }
+    /*--------------------------------
+    * movie
+    ---------------------------------*/
+    .movie-wrap{
+      max-width: 700px;
+    }
+    /*--------------------------------
+    * entry
+    ---------------------------------*/
+    .entry-square{
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
