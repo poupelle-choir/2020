@@ -265,7 +265,7 @@ rt{
   z-index: 90;
 }
 .nav-item{
-  padding-top:120px;
+  padding-top:130px;
   padding-left: 50px;
 }
 .nav-sp_inner{
@@ -274,10 +274,10 @@ rt{
 .nav-item li{
   display: block;
   margin-right: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 .nav-item li a{
-  font-size:1.8rem;
+  font-size:1.5rem;
   padding-bottom: 50px;
 }
 .nav-en{
