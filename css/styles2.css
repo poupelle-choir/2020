@@ -939,7 +939,6 @@ button.readmore:hover::after {
     overflow: hidden;
   }
   .is-mobile .rotate{
-    display:block; 
     position:fixed;
     z-index:100;
   }
