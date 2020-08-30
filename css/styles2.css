@@ -933,6 +933,41 @@ button.readmore:hover::after {
   padding-bottom: 20px;
 }
 
+/*
+
+@media screen and (orientation: landscape) {
+  .is-mobile .text::before {
+    content: "スマホの横";
+  }
+  .header.is-mobile{
+    height: 150vh;
+  }
+  .hero-sp.is-mobile{
+    max-width: 300px;
+    transform: translate(calc(50vw - 50%),calc(50vh - 30%));
+  }
+  .is-mobile.h-text_wrap.is-mobile{
+    width: calc(100% - 53%);
+    bottom:8%;
+  }
+  .h-midashi.is-mobile{
+    top: 45%;
+  }
+  .h-right_text.is-mobile{
+    right: 5%;
+    top: calc(50%);
+    transform: translateY(-50%);
+    text-align: center;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+  #parallax-bg.is-mobile{
+    background-image: url(../img/poupelle.jpg);
+  }
+}
+*/
+
 
 @media screen and (min-width: 580px){
   /*ws日程ボックスの調整*/
@@ -1437,6 +1472,18 @@ button.readmore:hover::after {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
