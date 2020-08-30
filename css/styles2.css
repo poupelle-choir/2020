@@ -934,7 +934,6 @@ button.readmore:hover::after {
 }
 
 /*スマホ横*/
-@media screen and (orientation: landscape) {
   .is-mobile{
     overflow: hidden;
   }
@@ -946,7 +945,7 @@ button.readmore:hover::after {
     height: 100%;
     z-index:100;
   }
-  
+@media screen and (orientation: landscape) {
 }
 
 @media screen and (min-width: 580px){
