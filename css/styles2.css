@@ -30,6 +30,12 @@ img{
 
 #rotate{
   display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index:100;
 }
 
 /*--------------------------------
@@ -931,21 +937,6 @@ button.readmore:hover::after {
   display: block;
   margin: 0 auto;
   padding-bottom: 20px;
-}
-
-/*スマホ横*/
-  .is-mobile{
-    overflow: hidden;
-  }
-  .is-mobile #rotate{
-    position:fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    z-index:100;
-  }
-@media screen and (orientation: landscape) {
 }
 
 @media screen and (min-width: 580px){
