@@ -149,15 +149,17 @@ $(function (){
 });
 
 
-// スマホを判定する処理
-function isMobile() {
-  const ua = navigator.userAgent;
-  return ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0
-}
+// スマホ横向き
+$(window).on('load orientationchange resize', function(){
+  if (Math.abs(window.orientation) === 90) {
+    // 横向きになったときの処理
+    $('body').toggleClass('is-mobile');
+  } else {
+    // 縦向きになったときの処理
+    ('body').removeClass('active');
+  }
+});
 
-// スマホのときにbodyタグにクラスをつける
-if (isMobile()) {
-  document.body.classList.add('is-mobile');
-}
+
   
 
