@@ -4,21 +4,49 @@
 
 //ページ切り替え時のフェードイン//
 $(function () {
-  
+
   $('body').hide().fadeIn(1300);
-  
+
 });
 
 
 //ハンバーガーメニュー
 $(function () {
-  
-  $('.menu-btn').on('touchstart click', function (event) {
+
+  $('#menu-bar').on('touchstart click', function (event) {
     // touchstart以降のイベントを発生させないように
     event.preventDefault();
     $(this).toggleClass('active');
-    $('.nav').fadeToggle(500);
+    $('#nav').fadeToggle(500);
   });
+  
+  if (window.matchMedia( "(max-width: 1023px)" ).matches) {
+    $("#message-link").on("click", function() {
+      $("#nav").fadeToggle(500);//開いているナビゲーションを閉じる
+      $("#menu-bar").removeClass("active");//btnについてる「active」のclassを消す
+    });
+  }else{
+    
+  }
+  
+//  var state = false;
+//  var scrollpos;
+//
+//  $('#menu-bar').on('touchstart click', function () {
+//    if (state == false) {
+//      scrollpos = $(window).scrollTop();
+//      $('body').addClass('fixed').css({'top': -scrollpos});
+//      $('#menu-bar').addClass('open');
+//      state = true;
+//    } else {
+//      $('body').removeClass('fixed').css({'top': 0});
+//      window.scrollTo( 0 , scrollpos );
+//      $('.nav').removeClass('open');
+//      state = false;
+//    }
+//  });
+
+  
 });
 
 
@@ -53,7 +81,7 @@ $(function(){
     }
   });
 });
-  
+
 
 //講師紹介more
 $(function(){
@@ -79,12 +107,13 @@ $(function(){
     $(".hide-text_03").slideToggle(1000);
   });
 });
-//
-//
+
+
+
 //ページ内リンク位置調整
 $(function(){
-  
-  $('a[href^="#"]').not('.menu-btn').on('touchstart click', function(event) {
+
+  $('a[href^="#"]').not('#menu-bar').on('touchstart click', function(event) {
     event.preventDefault();
     var adjust = -80;// 移動先を下にずらす
     var speed = 500; // ミリ秒 // スクロールの速度
@@ -97,19 +126,19 @@ $(function(){
 });
 
 
-$(window).on('load', function() {
-  var url = $(location).attr('href');
-  if(url.indexOf("?id=") != -1){
-    var id = url.split("?id=");
-    var $target = $('#' + id[id.length - 1]);
-    if($target.length){
-      var pos = $target.offset().top;
-      $("html, body").animate({scrollTop:pos}, 1500);
-    }
-  }
-});
-  
-  
+//$(window).on('load', function() {
+//  var url = $(location).attr('href');
+//  if(url.indexOf("?id=") != -1){
+//    var id = url.split("?id=");
+//    var $target = $('#' + id[id.length - 1]);
+//    if($target.length){
+//      var pos = $target.offset().top;
+//      $("html, body").animate({scrollTop:pos}, 1500);
+//    }
+//  }
+//});
+
+
 //faqアコーディオン
 $(function (){
   $('.js-accordion-title').on('touchstart click', function(event) {
@@ -120,3 +149,17 @@ $(function (){
     $(this).toggleClass('open', 200);
   });
 });
+
+
+// スマホを判定する処理
+function isMobile() {
+  const ua = navigator.userAgent;
+  return ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0
+}
+
+// スマホのときにbodyタグにクラスをつける
+if (isMobile()) {
+  document.body.classList.add('is-mobile');
+}
+  
+
