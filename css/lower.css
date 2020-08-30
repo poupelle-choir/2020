@@ -14,6 +14,43 @@
   padding-bottom: 40px;
 }
 /*--------------------------------
+* workshop
+---------------------------------*/
+.ws-day_wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.ws-text{
+  padding-bottom: 30px;
+}
+.bar-title_ws{
+  font-size:1.6rem;
+  margin-bottom: 20px;
+}
+.ws-day_wrap li{
+  padding-bottom: 15px;
+}
+.ws-day_wrap li:last-of-type{
+  padding-bottom: 0;
+}
+.ws-day::after{
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  font-weight: 900;
+  margin-left: 5px;
+}
+.ws-day_btn>a{
+  display: inline-block;
+  width: 150px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 20px;
+  border:solid 1px #0accc4;
+  text-align: center;
+}
+
+/*--------------------------------
 * movie
 ---------------------------------*/
 .movie-title{
@@ -317,6 +354,12 @@
     padding-top: 170px;
   } 
   /*--------------------------------
+  * workshop
+  ---------------------------------*/
+  .ws-day_wrap{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  /*--------------------------------
   * how to
   ---------------------------------*/
   .btn-link_wrap{
@@ -394,7 +437,7 @@
   /*1024 以上*/
   @media screen and (min-width: 1024px) {
     /*--------------------------------
-    * commoc
+    * common
     ---------------------------------*/
     .lower-inner{
       width: 65%;
@@ -405,9 +448,6 @@
     /*--------------------------------
     * how to
     ---------------------------------*/
-    .btn-link>a{
-      width: 250px;
-    }
     .btn-link_wrap{
       padding-bottom: 80px;
     }
