@@ -4,14 +4,14 @@
 
 
 // スマホ横向き
-  $(window).on('load orientationchange resize', function(){
-    if (Math.abs(window.orientation) === 90) {
-      // 横向きになったときの処理
-      $('body').toggleClass('is-mobile');
-    } else {
-      // 縦向きになったときの処理
-      $('body').removeClass('is-mobile');
-    }
+$(window).on('load orientationchange resize', function(){
+  if (Math.abs(window.orientation) === 90) {
+    // 横向きになったときの処理
+    $('.rotate').show();
+  } else {
+    // 縦向きになったときの処理
+    $('.rotate').hide();
+  }
 });
 
 
