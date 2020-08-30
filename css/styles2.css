@@ -1080,6 +1080,7 @@ button.readmore:hover::after {
   }
   .nav-item{
     padding-left: 150px;
+    padding-top: 180px;
   }
   /*--------------------------------
   * message
