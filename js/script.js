@@ -2,7 +2,9 @@
 /*global $*/
 'use strict';
 
-// スマホ横向き
+/*--------------------------------
+  * スマホ横向き
+---------------------------------*/
 $(window).on('load orientationchange resize', function(){
   if (Math.abs(window.orientation) === 90) {
     // 横向きになったときの処理
@@ -14,12 +16,18 @@ $(window).on('load orientationchange resize', function(){
   }
 });
 
-//ページ切り替え時のフェードイン//
+
+/*--------------------------------
+  * ページ切り替え時のフェードイン
+---------------------------------*/
 $(function () {
   $('body').hide().fadeIn(1300);
 });
 
-//ハンバーガーメニュー
+
+/*--------------------------------
+  * ハンバーガーメニュー
+---------------------------------*/
 $(function () {
 
   $('#menu-bar').on('touchstart click', function (event) {
@@ -38,26 +46,10 @@ $(function () {
   }); 
 });
 
-  
-//  var state = false;
-//  var scrollpos;
-//
-//  $('#menu-bar').on('touchstart click', function () {
-//    if (state == false) {
-//      scrollpos = $(window).scrollTop();
-//      $('body').addClass('fixed').css({'top': -scrollpos});
-//      $('#menu-bar').addClass('open');
-//      state = true;
-//    } else {
-//      $('body').removeClass('fixed').css({'top': 0});
-//      window.scrollTo( 0 , scrollpos );
-//      $('.nav').removeClass('open');
-//      state = false;
-//    }
-//  });
 
-
-//スクロールでフェードイン
+/*--------------------------------
+  * スクロールでフェードイン
+---------------------------------*/
 $(function () {
   $(window).scroll(function () {
     const wHeight = $(window).height();
@@ -72,8 +64,11 @@ $(function () {
 });
 
 
-//背景固定部分
-$(function(){
+
+/*--------------------------------
+  * 背景固定部分
+---------------------------------*/
+$(function () {
   var target1 = $("#parallax-bg");
   var targetPosOT1 = target1.offset().top;
   var targetFactor = 0.4;
@@ -90,7 +85,10 @@ $(function(){
 });
 
 
-//講師紹介more
+
+/*--------------------------------
+  * 講師紹介more
+---------------------------------*/
 $(function(){
   $(".readmore-01").on('touchstart click', function(event) {
     event.preventDefault();
@@ -117,7 +115,9 @@ $(function(){
 
 
 
-//ページ内リンク位置調整
+/*--------------------------------
+  * ページ内リンク位置調整
+---------------------------------*/
 $(function(){
 
   $('a[href^="#"]').not('#menu-bar').on('touchstart click', function(event) {
@@ -133,20 +133,10 @@ $(function(){
 });
 
 
-//$(window).on('load', function() {
-//  var url = $(location).attr('href');
-//  if(url.indexOf("?id=") != -1){
-//    var id = url.split("?id=");
-//    var $target = $('#' + id[id.length - 1]);
-//    if($target.length){
-//      var pos = $target.offset().top;
-//      $("html, body").animate({scrollTop:pos}, 1500);
-//    }
-//  }
-//});
 
-
-//faqアコーディオン
+/*--------------------------------
+  * faqアコーディオン
+---------------------------------*/
 $(function (){
   $('.js-accordion-title').on('touchstart click', function(event) {
     event.preventDefault();
@@ -157,8 +147,6 @@ $(function (){
   });
 });
 
-  
 
 
-  
-
+ 
