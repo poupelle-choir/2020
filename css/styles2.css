@@ -936,7 +936,6 @@ button.readmore:hover::after {
 /*スマホ横*/
 @media screen and (orientation: landscape) {
   .is-mobile{
-    position:relative;
     overflow: hidden;
   }
   .is-mobile .rotate{
