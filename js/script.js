@@ -2,27 +2,22 @@
 /*global $*/
 'use strict';
 
-
+// スマホ横向き
 $(window).on('load orientationchange resize', function(){
   if (Math.abs(window.orientation) === 90) {
     // 横向きになったときの処理
     $('#rotate').show();
-    $('body').toggleClass('is-mobile');
+    
   } else {
     // 縦向きになったときの処理
     $('#rotate').hide();
-    $('body').removeClass('is-mobile');
   }
 });
 
-
 //ページ切り替え時のフェードイン//
 $(function () {
-
   $('body').hide().fadeIn(1300);
-
 });
-
 
 //ハンバーガーメニュー
 $(function () {
