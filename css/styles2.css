@@ -936,10 +936,13 @@ button.readmore:hover::after {
 /*スマホ横*/
 @media screen and (orientation: landscape) {
   .is-mobile{
+    position:relative;
     overflow: hidden;
   }
   .is-mobile .rotate{
     position:fixed;
+    top:0;
+    left:0;
     z-index:100;
   }
   .is-mobile .rotate img{
