@@ -938,7 +938,7 @@ button.readmore:hover::after {
   .is-mobile{
     overflow: hidden;
   }
-  .is-mobile .rotate{
+  .is-mobile #rotate{
     position:fixed;
     top:0;
     left:0;
