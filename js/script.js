@@ -19,15 +19,16 @@ $(function () {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
-  
-  if (window.matchMedia( "(max-width: 1023px)" ).matches) {
-    $("#message-link").on("click", function() {
-      $("#nav").fadeToggle(500);//開いているナビゲーションを閉じる
-      $("#menu-bar").removeClass("active");//btnについてる「active」のclassを消す
-    });
-  }else{
-    
-  }
+});
+
+$(function () {
+  $("#message-link").on('touchstart click', function (event) {
+    event.preventDefault();
+    $('#nav').fadeToggle();//開いているナビゲーションを閉じる
+    $('#menu-bar').removeClass('active');//btnについてる「active」のclassを消す
+  }); 
+});
+
   
 //  var state = false;
 //  var scrollpos;
@@ -45,9 +46,6 @@ $(function () {
 //      state = false;
 //    }
 //  });
-
-  
-});
 
 
 //スクロールでフェードイン
@@ -161,7 +159,5 @@ function isMobile() {
 if (isMobile()) {
   document.body.classList.add('is-mobile');
 }
-
-
   
 
