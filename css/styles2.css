@@ -937,7 +937,10 @@ button.readmore:hover::after {
 @media screen and (orientation: landscape) {
   .is-mobile .rotate{
    display:block; 
-  
+   position:fixed;
+   width:100%;
+   heught:100%;
+   z-index:100;
   }
   
 }
