@@ -28,6 +28,10 @@ img{
   box-sizing: border-box;
 }
 
+.rotate{
+  display: none;
+}
+
 /*--------------------------------
 * common
 ---------------------------------*/
@@ -253,8 +257,9 @@ rt{
   bottom:4%;
   text-align: center;
   z-index: 10;
+  font-size:1.2rem;
 }
-.nav{
+#nav{
   display: none;
   position: fixed;
   top:0;
@@ -263,6 +268,7 @@ rt{
   height: 100%;
   background-color: #fff;
   z-index: 90;
+  overflow-y: scroll;
 }
 .nav-item{
   padding-top:130px;
@@ -326,6 +332,12 @@ rt{
 #menu-bar.active span:nth-of-type(3) {
   -webkit-transform: translateY(-20px) rotate(45deg);
   transform: translateY(-9px) rotate(45deg);
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 /*--------------------------------
 * about
@@ -406,6 +418,10 @@ rt{
 /*--------------------------------
 * message
 ---------------------------------*/
+#message{
+  padding-top: 80px;
+  margin-top: -80px;
+}
 .message-wrap{
   position: relative;
   margin: 0 auto 100px;
@@ -415,7 +431,7 @@ rt{
 .message-square{
   background-color: #f4d4bc;
   padding: 40px 20px;
-/*  width: 89%;*/
+  /*  width: 89%;*/
 }
 .bg-shadow_lightblue{
   background-image: none;
@@ -484,7 +500,7 @@ rt{
   margin-bottom: 30px;
 }
 .poupelle-text_right{
- padding-bottom: 20px; 
+  padding-bottom: 20px; 
 }
 /*--------------------------------
 * flow
@@ -605,6 +621,7 @@ rt{
   background-color: #fff;
   border-radius: 30px;
   padding: 5px 30px;
+  letter-spacing:  0.08em;
 }
 .btn-more{
   margin-left: 10px;
@@ -917,15 +934,50 @@ button.readmore:hover::after {
 }
 
 
-/*ws日程ボックスの調整*/
-/*映画告知の調整*/
+@media screen and (orientation: landscape) {
+/*
+  .is-mobile .text::before {
+    content: "スマホの横";
+  }
+*/
+  .header.is-mobile{
+    height: 150vh;
+  }
+  .hero-sp.is-mobile{
+    max-width: 300px;
+    transform: translate(calc(50vw - 50%),calc(50vh - 30%));
+  }
+  .is-mobile.h-text_wrap.is-mobile{
+    width: calc(100% - 53%);
+    bottom:8%;
+  }
+  .h-midashi.is-mobile{
+    top: 45%;
+  }
+  .h-right_text.is-mobile{
+    right: 5%;
+    top: calc(50%);
+    transform: translateY(-50%);
+    text-align: center;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+  #parallax-bg.is-mobile{
+    background-image: url(../img/poupelle.jpg);
+  }
+}
+
+
 @media screen and (min-width: 580px){
+  /*ws日程ボックスの調整*/
   .workshop-midashi{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
   } 
+  /*映画告知の調整*/
   .movie-notice{
     background-image: url(../img/poupelle3.jpg);
     background-size: auto;
@@ -955,7 +1007,7 @@ button.readmore:hover::after {
   .credit-collabo li span{
     width: 150px;
   }
-  
+
 }
 
 
@@ -989,13 +1041,13 @@ button.readmore:hover::after {
     max-width:500px; 
     transform: translate(calc(50vw - 50%),calc(50vh - 40%));
     z-index: 0;
-    }
+  }
   .logo img{
     width: 130px;
   }
   .h-text_wrap{
     width: 500px;
-    top: 73%;
+    bottom: 18%;
     left: calc(5%)
   }
   .main-title{
@@ -1051,7 +1103,7 @@ button.readmore:hover::after {
     align-items: center;
     padding-bottom: 50px;
     text-align: left;
-} 
+  } 
   .poupelle-text_right{
     width: 55%;
   }
@@ -1201,208 +1253,213 @@ button.readmore:hover::after {
     top:20px;
     left:-45px;
   }
-  
+
 }
-  
-  /*1024px 以上*/
-  @media screen and (min-width: 1024px) {
-    /*--------------------------------
-    * common
-    ---------------------------------*/
-    .section-inner{
-      width: 80%;
-      padding: 60px 0 100px;
-    }
-    /*--------------------------------
-    * btn
-    ---------------------------------*/
-    .btn>a{
-      width: 400px;
-      height: 60px;
-      line-height: 60px;
-    }
-    .flow__entry>a:hover{
-      background-color: #fff;
-      border:solid 1px #000;
-      transition: .8s;
-      color:#000;
-    }
-    .tb-block{
-      display: none;
-    }
-    /*--------------------------------
-    * header
-    ---------------------------------*/
-    .hero-pc{
-      max-width: 600px;
-      transform: translate(calc(50vw - 50%),calc(50vh - 30%));
-    }
-    .main-title{
-      top: 13%;
-      font-size: 4.5rem
-    }
-    .h-midashi{
-      font-size:2.5rem;
-      top: 42%;
-    }
-    .h-text_wrap{
-      width: 500px;
-      font-size:1.6rem;
-    }
-    .menu-btn_wrap{
-      display: none;
-    }
-    .nav{
-      display: block;
-      width: 100%;
-      height: auto;
-      background-color: transparent;
-    }
-    .nav-item{
-      position: absolute;
-      display: inline-block;
-      left: calc(50%);
-      top: 40px;
-      transform: translateX(-50%);
-      z-index: 100;
-    }
-    .nav-item li{
-      display: inline-block;
-      margin-right: 30px;
-      padding-bottom: 0;
-    }
-    .nav-item li:last-of-type{
-      margin-right: 0;
-    }
-    .nav-item li a {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-      color:#000;
-      padding-bottom: 5px;
-      font-size:1.4rem;
-    }
-    .nav-item li a::after {
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: #333;
-      opacity: 0;
-      visibility: hidden;
-      transition: .3s;
-    }
-    .nav-item li a:hover::after {
-      bottom: -4px;
-      opacity: 1;
-      visibility: visible;
-    }
-    .nav-item{
-      padding-top: 0;
-      padding-left: 0;
-    }
-    /*--------------------------------
-    * about
-    ---------------------------------*/
-    .point-01 , .point-02 , .point-03{
-      width: 60%; 
-    }
-    .point-02{
-      margin: 0 auto;
-    }
-    .point-03{
-      float:right;
-      margin-right: 5px;
-    }
-    #parallax-bg{
-      min-height: 400px;
-    }
-    /*--------------------------------
-    * message
-    ---------------------------------*/
-    .message-square{
-      padding: 50px 40px;
-    }
-    .poupelle-text_right{
-      width: 65%;
-    }
-    .poupelle-text_left{
-      width: 30%; 
-    }
-    /*--------------------------------
-    * flow
-    ---------------------------------*/
-    .flow-number{
-      width: 80px;
-      height: 80px;
-      margin-right:20px;
-    }
-    .flow-number span{
-      line-height: 80px;
-    }
-    .flow-text{
-      padding-left: 100px;
-    }
-    /*--------------------------------
-    * workshop
-    ---------------------------------*/
-    .workshop-text{
-      padding: 30px 30px 20px;
-    }
-    .workshop-text_left p{
-      padding-left: 0;
-    }
-    .workshop-img{
-      width: 150px;
-    }
-    /*--------------------------------
-    * app
-    ---------------------------------*/
-    .app-wrap{
-      display: flex;
-      justify-content: space-around;
-    }
-    .app-img{
-      width: 140px;
-    }
-    .app-text{
-      width: 55%;
-      padding-left: 0;
-    }
-    .app-gigafail{
-      padding-bottom: 0;
-    }
-    .app-gigafail, .app-zoom{
-      width: 45%;
-    }
-    /*--------------------------------
-    * contact
-    ---------------------------------*/
-    .contact-block{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .contact-block .btn>a{
-      width: 300px;
-    }
-    .contact-block p{
-      padding-bottom: 0;
-    }
-    /*--------------------------------
-    * movie
-    ---------------------------------*/
-    .movie-bg_white{
-      width: 40%;
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    
-    
-    
+
+/*1024px 以上*/
+@media screen and (min-width: 1024px) {
+  /*--------------------------------
+  * common
+  ---------------------------------*/
+  .section-inner{
+    width: 80%;
+    padding: 60px 0 100px;
   }
+  /*--------------------------------
+  * btn
+  ---------------------------------*/
+  .btn>a{
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .flow__entry>a:hover{
+    background-color: #fff;
+    border:solid 1px #000;
+    transition: .8s;
+    color:#000;
+  }
+  .tb-block{
+    display: none;
+  }
+  /*--------------------------------
+  * header
+  ---------------------------------*/
+  .hero-pc{
+    max-width: 550px;
+    transform: translate(calc(50vw - 50%),calc(50vh - 32%));
+  }
+  .main-title{
+    top: 13%;
+    font-size: 4.5rem
+  }
+  .h-midashi{
+    font-size:2.5rem;
+    top: 42%;
+  }
+  .h-text_wrap{
+    width: 500px;
+    font-size:1.6rem;
+  }
+  .menu-btn_wrap{
+    display: none;
+  }
+  #nav{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+  }
+  .nav-item{
+    position: absolute;
+    display: inline-block;
+    left: calc(50%);
+    top: 40px;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .nav-item li{
+    display: inline-block;
+    margin-right: 30px;
+    padding-bottom: 0;
+  }
+  .nav-item li:last-of-type{
+    margin-right: 0;
+  }
+  .nav-item li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color:#000;
+    padding-bottom: 5px;
+    font-size:1.4rem;
+  }
+  .nav-item li a::after {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+  }
+  .nav-item li a:hover::after {
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-item{
+    padding-top: 0;
+    padding-left: 0;
+    width: 100%;
+    max-width: 580px; 
+  }
+  /*--------------------------------
+  * about
+  ---------------------------------*/
+  .point-01 , .point-02 , .point-03{
+    width: 60%; 
+  }
+  .point-02{
+    margin: 0 auto;
+  }
+  .point-03{
+    float:right;
+    margin-right: 5px;
+  }
+  #parallax-bg{
+    min-height: 400px;
+  }
+  /*--------------------------------
+  * message
+  ---------------------------------*/
+  #message{
+    padding-top: 120px;
+    margin-top: -120px;
+  }
+  .message-square{
+    padding: 50px 40px;
+  }
+  .poupelle-text_right{
+    width: 65%;
+  }
+  .poupelle-text_left{
+    width: 30%; 
+  }
+  /*--------------------------------
+  * flow
+  ---------------------------------*/
+  .flow-number{
+    width: 80px;
+    height: 80px;
+    margin-right:20px;
+  }
+  .flow-number span{
+    line-height: 80px;
+  }
+  .flow-text{
+    padding-left: 100px;
+  }
+  /*--------------------------------
+  * workshop
+  ---------------------------------*/
+  .workshop-text{
+    padding: 30px 30px 20px;
+  }
+  .workshop-text_left p{
+    padding-left: 0;
+  }
+  .workshop-img{
+    width: 150px;
+  }
+  /*--------------------------------
+  * app
+  ---------------------------------*/
+  .app-wrap{
+    display: flex;
+    justify-content: space-around;
+  }
+  .app-img{
+    width: 140px;
+  }
+  .app-text{
+    width: 55%;
+    padding-left: 0;
+  }
+  .app-gigafail{
+    padding-bottom: 0;
+  }
+  .app-gigafail, .app-zoom{
+    width: 45%;
+  }
+  /*--------------------------------
+  * contact
+  ---------------------------------*/
+  .contact-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contact-block .btn>a{
+    width: 300px;
+  }
+  .contact-block p{
+    padding-bottom: 0;
+  }
+  /*--------------------------------
+  * movie
+  ---------------------------------*/
+  .movie-bg_white{
+    width: 40%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+
+}
 
 /*1280px 以上*/
 @media screen and (min-width: 1280px) {
@@ -1412,21 +1469,9 @@ button.readmore:hover::after {
   .movie-bg_white{
     width: 30%;
   }
-  
-  
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
