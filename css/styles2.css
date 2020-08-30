@@ -933,12 +933,11 @@ button.readmore:hover::after {
   padding-bottom: 20px;
 }
 
-/*
 
 @media screen and (orientation: landscape) {
-  .is-mobile .text::before {
+/*   .is-mobile .text::before {
     content: "スマホの横";
-  }
+  } */
   .header.is-mobile{
     height: 150vh;
   }
@@ -966,7 +965,6 @@ button.readmore:hover::after {
     background-image: url(../img/poupelle.jpg);
   }
 }
-*/
 
 
 @media screen and (min-width: 580px){
