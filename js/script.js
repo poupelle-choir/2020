@@ -156,7 +156,7 @@ $(window).on('load orientationchange resize', function(){
     $('body').toggleClass('is-mobile');
   } else {
     // 縦向きになったときの処理
-    ('body').removeClass('active');
+    ('body').removeClass('is-mobile');
   }
 });
 
