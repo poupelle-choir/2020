@@ -43,7 +43,7 @@
     <!--▼読み込み-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles2.css">
     <link rel="stylesheet" href="../css/lower.css">
@@ -63,8 +63,9 @@
         </a>
       </div>
 
-      <nav class="nav">
+      <nav id="nav">
         <ul class="nav-item">
+          <li><a href="../index.html#message"><span class="nav-en sp-only tb-block">Message</span>メッセージ</a></li>
           <li><a href="../lower/workshop.html"><span class="nav-en sp-only tb-block">Work shop</span>ワークショップ日程</a></li>
           <li><a href="../lower/howto.html"><span class="nav-en sp-only tb-block">How to</span>録音 / 録画手順</a></li>
           <li><a href="../lower/movie.html"><span class="nav-en sp-only tb-block">Movie</span>お手本動画</a></li>
@@ -78,22 +79,40 @@
         <span class="section-title_en">Workshop</span>
         <h2 class="section-title_ja">ワークショップ開催日程</h2>
       </div>
+      
+      <div class="ws-text">
+        <p class="font-under">詳細情報や参加方法等はLINE公式アカウントにてご案内します。</p>
+        <p>※各ワークショップは1〜2時間程度。途中退出OKです。</p>
+      </div>
 
-
-      <h3 class="h-workshop">2020/9/12〜2020/10/17<br>Zoomアプリにて開催！</h3>
-      <p class="font-under">詳細情報や参加方法等はLINE公式アカウントにてご案内します。</p>
-      <p>※各ワークショップは1〜2時間程度。途中退出OKです。</p>
-
-
+      
+      <div class="text-center">
+        <p class="bar-title bar-title_ws">ワークショップ全日程</p>
+        <ul class="ws-day_wrap">
+          <li class="ws-day_btn"><a href="#ws-0912" class="ws-day">2020/9/12(Sat)</a></li>
+          <li class="ws-day_btn"><a href="#ws-0913" class="ws-day">2020/9/13(Sun)</a></li>
+          <li class="ws-day_btn"><a href="#ws-0919" class="ws-day">2020/9/19(Sat)</a></li>
+          <li class="ws-day_btn"><a href="#ws-0926" class="ws-day">2020/9/26(Sat)</a></li>
+          <li class="ws-day_btn"><a href="#ws-0927" class="ws-day">2020/9/27(Sun) </a></li>
+          <li class="ws-day_btn"><a href="#ws-1003" class="ws-day">2020/10/3(Sat)</a></li>
+          <li class="ws-day_btn"><a href="#ws-1004" class="ws-day">2020/10/4(Sun)</a></li>
+          <li class="ws-day_btn"><a href="#ws-1010" class="ws-day">2020/10/10(Sut)</a></li>
+          <li class="ws-day_btn"><a href="#ws-1011" class="ws-day">2020/10/11(Sun)</a></li>
+          <li class="ws-day_btn"><a href="#ws-1017" class="ws-day">2020/10/17(Sat)</a></li>
+          
+        </ul>
+        
+      </div>
+     
       <div class="workshop-list_wrap">
         <ul>
 
           <!--歌唱トレーニング-->
-          <li class="workshop-list">
+          <li class="workshop-list" id="ws-0912">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>プロも使用！歌唱トレーニング方法</h4>
-              <p class="workshop-day">開催日：2020/9/12　16:00〜</p>
+              <p class="workshop-day">開催日：2020/9/12(Sat)　<br class="sp-only">16:00〜</p>
             </div>
 
             <div class="workshop-text">
@@ -118,11 +137,11 @@
           </li>
 
           <!--手話-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup"　id="ws-0913">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>えんとつ町のプペル ×手話</h4>
-              <p class="workshop-day">開催日：2020/9/13　20:00〜</p>
+              <p class="workshop-day">開催日：2020/9/13(Sun)　<br class="sp-only">20:00〜</p>
             </div>
 
            
@@ -151,11 +170,11 @@
           </li>
 
           <!--パート練習-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup"  id="ws-0919">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>パート練習をしよう！</h4>
-              <p class="workshop-day">開催日：2020/9/19　14:00〜 / 16:00〜 / 18:00〜</p>
+              <p class="workshop-day">開催日：2020/9/19(Sat)　<br class="sp-only">14:00〜 / 16:00〜 / 18:00〜</p>
             </div>
            
             <div class="workshop-text">
@@ -170,6 +189,7 @@
                   パートA向け練習　14:00〜<br>
                   パートB向け練習　16:00〜<br>
                   パートC向け練習　18:00〜
+                </p>
 
                 <p>各パートの音程が不安な方必見！
                   パートごとにより深く練習していきましょう！
@@ -180,11 +200,11 @@
           </li>
 
           <!--パート練習-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup"  id="ws-0926">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>パート練習をしよう！</h4>
-              <p class="workshop-day">開催日：2020/9/26　14:00〜 / 16:00〜 / 18:00〜</p>
+              <p class="workshop-day">開催日：2020/9/26(Sat)　<br class="sp-only">14:00〜 / 16:00〜 / 18:00〜</p>
             </div>
 
             <div class="workshop-text">
@@ -195,11 +215,13 @@
               </div>
              
               <div class="workshop-text_right">
-                <p>パートA向け練習　14:00〜
-                  パートB向け練習　16:00〜
+                <p class="workshop-text_para">
+                  パートA向け練習　14:00〜<br>
+                  パートB向け練習　16:00〜<br>
                   パートC向け練習　18:00〜
+                </p>
 
-                  各パートの音程が不安な方必見！
+                <p>各パートの音程が不安な方必見！
                   パートごとにより深く練習していきましょう！
                 </p>
               </div>
@@ -209,11 +231,11 @@
 
          
           <!--質問会-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup"  id="ws-0927">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>疑問や不安はここで解消！質問会</h4>
-              <p class="workshop-day">開催日：2020/9/27 17:00〜</p>
+              <p class="workshop-day">開催日：2020/9/27(Sun) <br class="sp-only">17:00〜</p>
             </div>
 
             <div class="workshop-text">
@@ -232,11 +254,11 @@
           </li>
 
           <!--表現講座-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup" id="ws-1003">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>表現講座　全体向け</h4>
-              <p class="workshop-day">開催日：2020/10/3 17:00</p>
+              <p class="workshop-day">開催日：2020/10/3(Sat) <br class="sp-only">17:00</p>
             </div>
 
             <div class="workshop-text">
@@ -254,11 +276,11 @@
           </li>
 
           <!--パート練習-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup" id="ws-1004">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>パート練習をしよう！</h4>
-              <p class="workshop-day">開催日：2020/10/4　14:00〜 / 16:00〜 / 18:00〜</p>
+              <p class="workshop-day">開催日：2020/10/4(Sun)　<br class="sp-only">14:00〜 / 16:00〜 / 18:00〜</p>
             </div>
 
             <div class="workshop-text">
@@ -269,13 +291,14 @@
               </div>
              
               <div class="workshop-text_right">
-                <p>
-                パートA向け練習　14:00〜
-                パートB向け練習　16:00〜
-                パートC向け練習　18:00〜
+                <p class="workshop-text_para">
+                  パートA向け練習　14:00〜<br>
+                  パートB向け練習　16:00〜<br>
+                  パートC向け練習　18:00〜
+                </p>
 
-                各パートの音程が不安な方必見！
-                パートごとにより深く練習していきましょう！
+                <p>各パートの音程が不安な方必見！
+                  パートごとにより深く練習していきましょう！
                 </p>
               </div>
 
@@ -283,11 +306,11 @@
           </li>
 
           <!--全体練習-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup" id="ws-1010">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>最終調整！全体練習</h4>
-              <p class="workshop-day">開催日：2020/10/10</p>
+              <p class="workshop-day">開催日：2020/10/10(Sut)</p>
             </div>
 
             <div class="workshop-text">
@@ -305,11 +328,11 @@
           </li>
 
           <!--パート練習-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup" id="ws-1011">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>パート練習をしよう！（希望者いれば）</h4>
-              <p class="workshop-day">開催日：2020/10/11　17:00〜</p>
+              <p class="workshop-day">開催日：2020/10/11(Sun)　<br class="sp-only">17:00〜</p>
             </div>
 
             <div class="workshop-text">
@@ -327,11 +350,11 @@
           </li>
 
           <!--動画撮影会-->
-          <li class="workshop-list scrollanime downup">
+          <li class="workshop-list scrollanime downup"  id="ws-1017">
             <div class="bg-shadow"></div>
             <div class="workshop-midashi">
               <h4>いよいよ本番！動画撮影会！</h4>
-              <p class="workshop-day">開催日：2020/10/17</p>
+              <p class="workshop-day">開催日：2020/10/17(Sat)</p>
             </div>
 
             <div class="workshop-text">
