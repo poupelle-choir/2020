@@ -2,9 +2,11 @@
 /*global $*/
 'use strict';
 
+
 /*--------------------------------
   * スマホ横向き
 ---------------------------------*/
+
 $(window).on('load resize', function () {
   var w = $(window).width();
   var x = 768;
@@ -40,21 +42,37 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').on('touchstart click', function (event) {
-    // touchstart以降のイベントを発生させないように
-    event.preventDefault();
+  $('#menu-bar').click(function() {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
 $(function () {
-  $("#message-link").on('touchstart click', function (event) {
-    event.preventDefault();
+  $("#message-link").click(function() {
     $('#nav').fadeToggle();//開いているナビゲーションを閉じる
     $('#menu-bar').removeClass('active');//btnについてる「active」のclassを消す
   }); 
 });
+
+
+  
+//  var state = false;
+//  var scrollpos;
+//
+//  $('#menu-bar').on('touchstart click', function () {
+//    if (state == false) {
+//      scrollpos = $(window).scrollTop();
+//      $('body').addClass('fixed').css({'top': -scrollpos});
+//      $('#menu-bar').addClass('open');
+//      state = true;
+//    } else {
+//      $('body').removeClass('fixed').css({'top': 0});
+//      window.scrollTo( 0 , scrollpos );
+//      $('.nav').removeClass('open');
+//      state = false;
+//    }
+//  });
 
 
 /*--------------------------------
@@ -100,24 +118,21 @@ $(function () {
   * 講師紹介more
 ---------------------------------*/
 $(function(){
-  $(".readmore-01").on('touchstart click', function(event) {
-    event.preventDefault();
+  $(".readmore-01").click(function() {
     $(this).toggleClass("on-click");
     $(".hide-text_01").slideToggle(1000);
   });
 });
 
 $(function(){
-  $(".readmore-02").on('touchstart click', function(event) {
-    event.preventDefault();
+  $(".readmore-02").click(function() {
     $(this).toggleClass("on-click");
     $(".hide-text_02").slideToggle(1000);
   });
 });
 
 $(function(){
-  $(".readmore-03").on('touchstart click', function(event) {
-    event.preventDefault();
+  $(".readmore-03").click(function() {
     $(this).toggleClass("on-click");
     $(".hide-text_03").slideToggle(1000);
   });
@@ -130,7 +145,7 @@ $(function(){
 ---------------------------------*/
 $(function(){
 
-  $('a[href^="#"]').not('#menu-bar').on('touchstart click', function(event) {
+  $('a[href^="#"]').not('#menu-bar').click(function() {
     event.preventDefault();
     var adjust = -80;// 移動先を下にずらす
     var speed = 500; // ミリ秒 // スクロールの速度
@@ -143,12 +158,24 @@ $(function(){
 });
 
 
+//$(window).on('load', function() {
+//  var url = $(location).attr('href');
+//  if(url.indexOf("?id=") != -1){
+//    var id = url.split("?id=");
+//    var $target = $('#' + id[id.length - 1]);
+//    if($target.length){
+//      var pos = $target.offset().top;
+//      $("html, body").animate({scrollTop:pos}, 1500);
+//    }
+//  }
+//});
+
 
 /*--------------------------------
   * faqアコーディオン
 ---------------------------------*/
 $(function (){
-  $('.js-accordion-title').on('touchstart click', function(event) {
+  $('.js-accordion-title').click(function() {
     event.preventDefault();
     /*クリックでコンテンツを開閉*/
     $(this).next().slideToggle(200);
@@ -159,4 +186,5 @@ $(function (){
 
 
 
- 
+  
+
