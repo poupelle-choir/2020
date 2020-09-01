@@ -24,6 +24,10 @@
 .ws-text{
   padding-bottom: 30px;
 }
+.workshop-list_top{
+  padding-top: 80px;
+  margin-top: -80px;
+}
 .bar-title_ws{
   font-size:1.6rem;
   margin-bottom: 20px;
