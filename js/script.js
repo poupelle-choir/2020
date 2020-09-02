@@ -40,7 +40,7 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').click(function () {
+  $('#menu-bar').touchstart(function () {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
