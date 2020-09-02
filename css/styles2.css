@@ -28,6 +28,9 @@ img{
   box-sizing: border-box;
 }
 
+/*--------------------------------
+* スマホ横
+---------------------------------*/
 #rotate{
   display: none;
   position:fixed;
@@ -568,6 +571,11 @@ rt{
 /*--------------------------------
 * workshop
 ---------------------------------*/
+
+/*ws日程*/
+#ws-0927 , #ws-1003 , #ws-1004 , #ws-1010 , #ws-1011 , #ws-1017 {
+  display: none;
+}
 .h-workshop{
   color:#daa47b;
   font-size:2.5rem;
@@ -938,6 +946,7 @@ button.readmore:hover::after {
   margin: 0 auto;
   padding-bottom: 20px;
 }
+
 
 @media screen and (min-width: 580px){
   /*ws日程ボックスの調整*/
