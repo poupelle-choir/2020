@@ -30,51 +30,51 @@
 // });
 
 
-// /*--------------------------------
-//   * ページ切り替え時のフェードイン
-// ---------------------------------*/
-// $(function () {
-//   $('body').hide().fadeIn(1300);
-// });
+/*--------------------------------
+  * ページ切り替え時のフェードイン
+---------------------------------*/
+$(function () {
+  $('body').hide().fadeIn(1300);
+});
 
 
-// /*--------------------------------
-//   * ハンバーガーメニュー
-// ---------------------------------*/
-// $(function () {
+/*--------------------------------
+  * ハンバーガーメニュー
+---------------------------------*/
+$(function () {
 
-//   $('#menu-bar').click(function () {
-//     $(this).toggleClass('active');
-//     $('#nav').fadeToggle(500);
-//   });
-// });
+  $('#menu-bar').click(function () {
+    $(this).toggleClass('active');
+    $('#nav').fadeToggle(500);
+  });
+});
 
-// $(function () {
-//   $("#message-link").click(function () {
-//     $('#nav').fadeToggle();//開いているnav閉じる
-//     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
-//     $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
-//   }); 
-// });
+$(function () {
+  $("#message-link").click(function () {
+    $('#nav').fadeToggle();//開いているnav閉じる
+    $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
+    $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
+  }); 
+});
 
 
   
-//   var state = false;
-//   var scrollpos;
+  var state = false;
+  var scrollpos;
 
-//   $('#menu-bar').click(function () {
-//     if (state == false) {
-//       scrollpos = $(window).scrollTop();
-//       $('body').addClass('fixed').css({'top': -scrollpos});
-//       $('#menu-bar').addClass('open');
-//       state = true;
-//     } else {
-//       $('body').removeClass('fixed').css({'top': 0});
-//       window.scrollTo( 0 , scrollpos );
-//       $('#menu-bar').removeClass('open');
-//       state = false;
-//     }
-//   });
+  $('#menu-bar').click(function () {
+    if (state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $('#menu-bar').addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $('#menu-bar').removeClass('open');
+      state = false;
+    }
+  });
 
 
 /*--------------------------------
