@@ -142,22 +142,22 @@ $(function(){
 
 
 
-/*--------------------------------
-  * ページ内リンク位置調整
----------------------------------*/
-$(function(){
+// /*--------------------------------
+//   * ページ内リンク位置調整
+// ---------------------------------*/
+// $(function(){
 
-  $('a[href^="#"]').not('#menu-bar').click(function() {
-    event.preventDefault();
-    var adjust = -80;// 移動先を下にずらす
-    var speed = 500; // ミリ秒 // スクロールの速度
-    var href= $(this).attr('href');
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top + adjust;
-    $('body,html').animate({scrollTop:position}, speed, 'swing');
-    return false;
-  });
-});
+//   $('a[href^="#"]').not('#menu-bar').click(function() {
+//     event.preventDefault();
+//     var adjust = -80;// 移動先を下にずらす
+//     var speed = 500; // ミリ秒 // スクロールの速度
+//     var href= $(this).attr('href');
+//     var target = $(href == "#" || href == "" ? 'html' : href);
+//     var position = target.offset().top + adjust;
+//     $('body,html').animate({scrollTop:position}, speed, 'swing');
+//     return false;
+//   });
+// });
 
 
 //$(window).on('load', function() {
