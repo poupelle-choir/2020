@@ -25,6 +25,7 @@ $(window).on('load resize', function () {
     
   } else {
     //それ以外のときの処理
+   ;
   }
 });
 
