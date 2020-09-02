@@ -7,27 +7,27 @@
   * スマホ横向き
 ---------------------------------*/
 
-$(window).on('load resize', function () {
-  var w = $(window).width();
-  var x = 768;
-  if (w < x) {
-    //画面サイズが768px未満のときの処理
+// $(window).on('load resize', function () {
+//   var w = $(window).width();
+//   var x = 768;
+//   if (w < x) {
+//     //画面サイズが768px未満のときの処理
     
-    $(window).on('load orientationchange resize', function () {
-      if (Math.abs(window.orientation) === 90) {
-        // 横向きになったときの処理
-        $('#rotate').show(); 
-      } else {
-        // 縦向きになったときの処理
-        $('#rotate').hide();
-      }
-    });
+//     $(window).on('load orientationchange resize', function () {
+//       if (Math.abs(window.orientation) === 90) {
+//         // 横向きになったときの処理
+//         $('#rotate').show(); 
+//       } else {
+//         // 縦向きになったときの処理
+//         $('#rotate').hide();
+//       }
+//     });
     
-  } else {
-    //それ以外のときの処理
-   ;
-  }
-});
+//   } else {
+//     //それ以外のときの処理
+//    ;
+//   }
+// });
 
 
 /*--------------------------------
