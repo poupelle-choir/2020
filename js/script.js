@@ -40,14 +40,14 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').click(function () {
+  $('#menu-bar').on("touchstart",function () {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
 $(function () {
-  $("#message-link").click(function () {
+  $("#message-link").on("touchstart",function () {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
     $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
@@ -57,7 +57,7 @@ $(function () {
 var state = false;
 var scrollpos;
 
-$('#menu-bar').click(function () {
+$('#menu-bar').on("touchstart",function () {
   if (state == false) {
     scrollpos = $(window).scrollTop();
     $('body').addClass('fixed').css({'top': -scrollpos});
