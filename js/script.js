@@ -4,28 +4,31 @@
   * スマホ横向き
 ---------------------------------*/
 
-$(window).on('load resize', function () {
-  var w = $(window).width();
-  var x = 768;
-  if (w < x) {
-    //画面サイズが768px未満のときの処理
+$(function () {
+  $(window).on('load resize', function () {
+    var w = $(window).width();
+    var x = 768;
     
-    $(window).on('load orientationchange resize', function () {
-      if (Math.abs(window.orientation) === 90) {
-        // 横向きになったときの処理
-        $('#rotate').show(); 
-      } else {
-        // 縦向きになったときの処理
-        $('#rotate').hide();
-      }
-    });
-    
-  } else {
-    //それ以外のときの処理
-   ;
-  }
-});
+    if (w < x) {
+      //画面サイズが768px未満のときの処理
 
+      $(window).on('load orientationchange resize', function () {
+        if (Math.abs(window.orientation) === 90) {
+          // 横向きになったときの処理
+          $('#rotate').show();
+        } else {
+          // 縦向きになったときの処理
+          $('#rotate').hide();
+        }
+      });
+
+    } else {
+      //それ以外のときの処理
+      $('#rotate').hide();
+    }
+  });
+
+});
 
 /*--------------------------------
   * ページ切り替え時のフェードイン
@@ -40,35 +43,20 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').click( function() {
-    $(this).toggleClass('active');
+  $('#menu-bar').click(function () {
+    event.preventDefault();
+    //▲デフォルトのイベントをキャンセル
+    $('#menu-bar').toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
+//navの中のabout押した時
 $(function () {
-  $("#message-link").click( function() {
+  $("#message-link").click(function () {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
-    $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
-  }); 
-});
-
-var state = false;
-var scrollpos;
-
-$('#menu-bar').on("touchstart",function () {
-  if (state == false) {
-    scrollpos = $(window).scrollTop();
-    $('body').addClass('fixed').css({'top': -scrollpos});
-    $('#menu-bar').addClass('open');
-    state = true;
-  } else {
-    $('body').removeClass('fixed').css({'top': 0});
-    window.scrollTo( 0 , scrollpos );
-    $('#menu-bar').removeClass('open');
-    state = false;
-  }
+  });
 });
 
 
@@ -87,7 +75,6 @@ $(function () {
     });
   });
 });
-
 
 
 /*--------------------------------
@@ -142,8 +129,7 @@ $(function(){
 ---------------------------------*/
 $(function(){
 
-  $('a[href^="#"]').not('#menu-bar').click(function() {
-    event.preventDefault();
+  $('a[href^="#"]').not('#menu-bar').click(function () {
     var adjust = -80;// 移動先を下にずらす
     var speed = 500; // ミリ秒 // スクロールの速度
     var href= $(this).attr('href');
@@ -152,19 +138,6 @@ $(function(){
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
   });
-});
-
-
-$(window).on('load', function() {
- var url = $(location).attr('href');
- if(url.indexOf("?id=") != -1){
-   var id = url.split("?id=");
-   var $target = $('#' + id[id.length - 1]);
-   if($target.length){
-     var pos = $target.offset().top;
-     $("html, body").animate({scrollTop:pos}, 1500);
-   }
- }
 });
 
 
@@ -183,5 +156,5 @@ $(function (){
 
 
 
-  
+
 
