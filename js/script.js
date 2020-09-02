@@ -173,18 +173,18 @@ $(function(){
 //});
 
 
-/*--------------------------------
-  * faqアコーディオン
----------------------------------*/
-$(function (){
-  $('.js-accordion-title').click(function() {
-    event.preventDefault();
-    /*クリックでコンテンツを開閉*/
-    $(this).next().slideToggle(200);
-    /*矢印の向きを変更*/
-    $(this).toggleClass('open', 200);
-  });
-});
+// /*--------------------------------
+//   * faqアコーディオン
+// ---------------------------------*/
+// $(function (){
+//   $('.js-accordion-title').click(function() {
+//     event.preventDefault();
+//     /*クリックでコンテンツを開閉*/
+//     $(this).next().slideToggle(200);
+//     /*矢印の向きを変更*/
+//     $(this).toggleClass('open', 200);
+//   });
+// });
 
 
 
