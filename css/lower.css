@@ -16,6 +16,11 @@
 /*--------------------------------
 * workshop
 ---------------------------------*/
+/*ws日程*/
+#ws-0926 , #ws-0927 , #ws-1003 , #ws-1004 , #ws-1010 , #ws-1011 , #ws-1017 {
+  display: block;
+}
+
 .ws-day_wrap{
   display: grid;
   grid-template-columns: 1fr 1fr;
