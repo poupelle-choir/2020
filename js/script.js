@@ -140,32 +140,32 @@ $(function(){
 /*--------------------------------
   * ページ内リンク位置調整
 ---------------------------------*/
-// $(function(){
+$(function(){
 
-//   $('a[href^="#"]').not('#menu-bar').click(function() {
-//     event.preventDefault();
-//     var adjust = -80;// 移動先を下にずらす
-//     var speed = 500; // ミリ秒 // スクロールの速度
-//     var href= $(this).attr('href');
-//     var target = $(href == "#" || href == "" ? 'html' : href);
-//     var position = target.offset().top + adjust;
-//     $('body,html').animate({scrollTop:position}, speed, 'swing');
-//     return false;
-//   });
-// });
-
-
-$(window).on('load', function() {
- var url = $(location).attr('href');
- if(url.indexOf("?id=") != -1){
-   var id = url.split("?id=");
-   var $target = $('#' + id[id.length - 1]);
-   if($target.length){
-     var pos = $target.offset().top;
-     $("html, body").animate({scrollTop:pos}, 1500);
-   }
- }
+  $('a[href^="#"]').not('#menu-bar').click(function() {
+    event.preventDefault();
+    var adjust = -80;// 移動先を下にずらす
+    var speed = 500; // ミリ秒 // スクロールの速度
+    var href= $(this).attr('href');
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top + adjust;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
 });
+
+
+// $(window).on('load', function() {
+//  var url = $(location).attr('href');
+//  if(url.indexOf("?id=") != -1){
+//    var id = url.split("?id=");
+//    var $target = $('#' + id[id.length - 1]);
+//    if($target.length){
+//      var pos = $target.offset().top;
+//      $("html, body").animate({scrollTop:pos}, 1500);
+//    }
+//  }
+// });
 
 
 /*--------------------------------
