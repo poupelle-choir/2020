@@ -54,22 +54,22 @@ $(function () {
   }); 
 });
 
-var state = false;
-var scrollpos;
+// var state = false;
+// var scrollpos;
 
-$('#menu-bar').on("touchstart",function () {
-  if (state == false) {
-    scrollpos = $(window).scrollTop();
-    $('body').addClass('fixed').css({'top': -scrollpos});
-    $('#menu-bar').addClass('open');
-    state = true;
-  } else {
-    $('body').removeClass('fixed').css({'top': 0});
-    window.scrollTo( 0 , scrollpos );
-    $('#menu-bar').removeClass('open');
-    state = false;
-  }
-});
+// $('#menu-bar').on("touchstart",function () {
+//   if (state == false) {
+//     scrollpos = $(window).scrollTop();
+//     $('body').addClass('fixed').css({'top': -scrollpos});
+//     $('#menu-bar').addClass('open');
+//     state = true;
+//   } else {
+//     $('body').removeClass('fixed').css({'top': 0});
+//     window.scrollTo( 0 , scrollpos );
+//     $('#menu-bar').removeClass('open');
+//     state = false;
+//   }
+// });
 
 
 /*--------------------------------
