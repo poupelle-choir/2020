@@ -40,26 +40,24 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').touchstart , function () {
+  $('#menu-bar').click(function () {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
 $(function () {
-  $("#message-link").touchstart , function () {
+  $("#message-link").click(function () {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
     $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
   }); 
 });
 
-
-
 var state = false;
 var scrollpos;
 
-$('#menu-bar').touchstart, function() {
+$('#menu-bar').click(function () {
   if (state == false) {
     scrollpos = $(window).scrollTop();
     $('body').addClass('fixed').css({'top': -scrollpos});
