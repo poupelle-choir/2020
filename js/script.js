@@ -116,29 +116,29 @@
 
 
 
-/*--------------------------------
-  * 講師紹介more
----------------------------------*/
-$(function(){
-  $(".readmore-01").click(function() {
-    $(this).toggleClass("on-click");
-    $(".hide-text_01").slideToggle(1000);
-  });
-});
+// /*--------------------------------
+//   * 講師紹介more
+// ---------------------------------*/
+// $(function(){
+//   $(".readmore-01").click(function() {
+//     $(this).toggleClass("on-click");
+//     $(".hide-text_01").slideToggle(1000);
+//   });
+// });
 
-$(function(){
-  $(".readmore-02").click(function() {
-    $(this).toggleClass("on-click");
-    $(".hide-text_02").slideToggle(1000);
-  });
-});
+// $(function(){
+//   $(".readmore-02").click(function() {
+//     $(this).toggleClass("on-click");
+//     $(".hide-text_02").slideToggle(1000);
+//   });
+// });
 
-$(function(){
-  $(".readmore-03").click(function() {
-    $(this).toggleClass("on-click");
-    $(".hide-text_03").slideToggle(1000);
-  });
-});
+// $(function(){
+//   $(".readmore-03").click(function() {
+//     $(this).toggleClass("on-click");
+//     $(".hide-text_03").slideToggle(1000);
+//   });
+// });
 
 
 
