@@ -1,5 +1,5 @@
 
 RewriteEngine on
-RewriteCond %{ HTTP_HOST} ^■■\.com
+RewriteCond %{THE_REQUEST} ^.*/index.html
 RewriteRule ^(.*)$ https://poupelle-choir.github.io/2020/workshop/workshop.html/$1 [L,R=301]
 
