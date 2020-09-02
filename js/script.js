@@ -40,14 +40,14 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').touchstart(function () {
+  $('#menu-bar').on('touchstart', function() {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
 $(function () {
-  $("#message-link").click(function () {
+  $("#message-link").on('touchstart', function() {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
     $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
@@ -55,23 +55,23 @@ $(function () {
 });
 
 
-  
-  var state = false;
-  var scrollpos;
 
-  $('#menu-bar').click(function () {
-    if (state == false) {
-      scrollpos = $(window).scrollTop();
-      $('body').addClass('fixed').css({'top': -scrollpos});
-      $('#menu-bar').addClass('open');
-      state = true;
-    } else {
-      $('body').removeClass('fixed').css({'top': 0});
-      window.scrollTo( 0 , scrollpos );
-      $('#menu-bar').removeClass('open');
-      state = false;
-    }
-  });
+var state = false;
+var scrollpos;
+
+$('#menu-bar').on('touchstart', function() {
+  if (state == false) {
+    scrollpos = $(window).scrollTop();
+    $('body').addClass('fixed').css({'top': -scrollpos});
+    $('#menu-bar').addClass('open');
+    state = true;
+  } else {
+    $('body').removeClass('fixed').css({'top': 0});
+    window.scrollTo( 0 , scrollpos );
+    $('#menu-bar').removeClass('open');
+    state = false;
+  }
+});
 
 
 /*--------------------------------
