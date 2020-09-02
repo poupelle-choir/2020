@@ -40,14 +40,14 @@ $(function () {
 ---------------------------------*/
 $(function () {
 
-  $('#menu-bar').click(function() {
+  $('#menu-bar').click( function() {
     $(this).toggleClass('active');
     $('#nav').fadeToggle(500);
   });
 });
 
 $(function () {
-  $("#message-link").click(function() {
+  $("#message-link").click( function() {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
     $('body').removeClass('fixed');//bodyについてる.fixedのclassはずす
