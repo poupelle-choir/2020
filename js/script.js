@@ -43,39 +43,42 @@ $(function () {
 ---------------------------------*/
 
 //navオープン時に背景固定
-$(function(){
+$(function (){
   var state = false;
   var scrollpos;
 
+  $("#message-link").click(function () {
+    $('#nav').fadeToggle();//開いているnav閉じる
+    $('#menu-bar').toggleClass('active');//btnについてる.activeのclassをはずす
+    $('body').toggleClass('fixed');
+    return false;
+  });
+  
+  
   $('#menu-bar').on('click', function(){
     event.preventDefault();
     //▲デフォルトのイベントをキャンセル
     if(state == false) {
       scrollpos = $(window).scrollTop();
-      $('body').addClass('fixed').css({'top': -scrollpos});
-      $('#menu-bar').addClass('active');
+      $('#menu-bar').toggleClass('active');
       $('#nav').fadeToggle(500);
+      $('body').toggleClass('fixed').css({'top': -scrollpos});
       state = true;
     } else {
-      $('body').removeClass('fixed').css({'top': 0});
+      $('body').toggleClass('fixed').css({'top': 0});
       window.scrollTo( 0 , scrollpos );
-      $('#menu-bar').removeClass('active');
+      $('#menu-bar').toggleClass('active');
       $('#nav').fadeToggle();
       state = false;
     }
   });
-
+  
+  
 });
+  
 
 
 //navの中のabout押した時
-$(function () {
-  $("#message-link").click(function () {
-    $('#nav').fadeToggle();//開いているnav閉じる
-    $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
-    $('body').removeClass('fixed');
-  });
-});
 
 /*--------------------------------
   * スクロールでフェードイン
