@@ -41,25 +41,41 @@ $(function () {
 /*--------------------------------
   * ハンバーガーメニュー
 ---------------------------------*/
-$(function () {
 
-  $('#menu-bar').click(function () {
+//navオープン時に背景固定
+$(function(){
+  var state = false;
+  var scrollpos;
+
+  $('#menu-bar').on('click', function(){
     event.preventDefault();
     //▲デフォルトのイベントをキャンセル
-    $('#menu-bar').toggleClass('active');
-    $('#nav').fadeToggle(500);
-    $('#entry-btn').hide();
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $('#menu-bar').addClass('active');
+      $('#nav').fadeToggle(500);
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $('#menu-bar').removeClass('active');
+      $('#nav').fadeToggle();
+      state = false;
+    }
   });
+
 });
+
 
 //navの中のabout押した時
 $(function () {
   $("#message-link").click(function () {
     $('#nav').fadeToggle();//開いているnav閉じる
     $('#menu-bar').removeClass('active');//btnについてる.activeのclassをはずす
+    $('body').removeClass('fixed');
   });
 });
-
 
 /*--------------------------------
   * スクロールでフェードイン
