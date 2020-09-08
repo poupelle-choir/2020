@@ -76,6 +76,21 @@ $(function () {
   });
 });
 
+/*--------------------------------
+  * スクロールしたらエントリーボタン表示（sp/tb）
+---------------------------------*/
+var entryBtn = $('#entry-btn');
+entryBtn.hide();
+//最初は非表示
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 550){
+    entryBtn.fadeIn(500);
+  }else{
+    entryBtn.fadeOut(500);
+  }
+});
+
 
 /*--------------------------------
   * 背景固定部分
@@ -139,6 +154,19 @@ $(function(){
     return false;
   });
 });
+
+
+//$(window).on('load', function() {
+//  var url = $(location).attr('href');
+//  if(url.indexOf("?id=") != -1){
+//    var id = url.split("?id=");
+//    var $target = $('#' + id[id.length - 1]);
+//    if($target.length){
+//      var pos = $target.offset().top;
+//      $("html, body").animate({scrollTop:pos}, 1500);
+//    }
+//  }
+//});
 
 
 /*--------------------------------
