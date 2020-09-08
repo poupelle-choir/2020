@@ -128,6 +128,30 @@ img{
 /*--------------------------------
 * btn
 ---------------------------------*/
+.entry-btn{
+  position: absolute;
+  top: 26px;
+  transform: translate(calc(50vw - 35%));
+  position: fixed;
+  z-index: 100;
+}
+.entry-btn>a{
+  display: block;
+  width: 120px;
+  background-color: #000;
+  border:solid 1px #000;
+  color:#fff;
+  height:40px;
+  line-height: 40px;
+  border-radius: 30px;
+  transition: .8s;
+}
+.entry-btn>a:hover{
+  background-color: #fff;
+  border:solid 1px #000;
+  color:#000;
+  transition: .8s;
+}
 .btn>a{
   display: block;
   width: 300px;
@@ -1241,6 +1265,9 @@ button.readmore:hover::after {
   /*--------------------------------
   * common
   ---------------------------------*/
+  .entry-btn{
+    display: none;
+  }
   .section-inner{
     width: 80%;
     padding: 60px 0 100px;
