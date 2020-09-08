@@ -48,6 +48,7 @@ $(function () {
     //▲デフォルトのイベントをキャンセル
     $('#menu-bar').toggleClass('active');
     $('#nav').fadeToggle(500);
+    $('#entry-btn').hide();
   });
 });
 
@@ -84,7 +85,7 @@ entryBtn.hide();
 //最初は非表示
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 650){
+  if($(this).scrollTop() > 550){
     entryBtn.fadeIn(500);
   }else{
     entryBtn.fadeOut(500);
