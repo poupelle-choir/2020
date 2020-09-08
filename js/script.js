@@ -84,7 +84,7 @@ entryBtn.hide();
 //最初は非表示
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 550){
+  if($(this).scrollTop() > 650){
     entryBtn.fadeIn(500);
   }else{
     entryBtn.fadeOut(500);
