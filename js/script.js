@@ -42,43 +42,34 @@ $(function () {
   * ハンバーガーメニュー
 ---------------------------------*/
 
-//navオープン時に背景固定
-$(function (){
-  var state = false;
-  var scrollpos;
 
-  $("#message-link").click(function () {
-    $('#nav').fadeToggle();//開いているnav閉じる
-    $('#menu-bar').toggleClass('active');//btnについてる.activeのclassをはずす
-    $('body').toggleClass('fixed');
-    return false;
-  });
-  
-  
-  $('#menu-bar').on('click', function(){
+var state = false;
+$('#menu-bar').on('click', function () {
+  event.preventDefault();
+  $('#menu-bar').toggleClass('active');
+  $('#nav').fadeToggle(500);
+  if (state == false){
+    $(window).on('touchmove.noScroll', e => {
+      e.preventDefault();
+    });
+    state = true;
+  } else {
+    $(window).off('.noScroll');
+    state = false;
+  }
+});
+
+
+$(function () {
+//navの中のabout押した時
+  $("#message-link").on('click', function () {
+    $('#nav').fadeToggle(); //開いているnav閉じる
+    $('#menu-bar').toggleClass('active'); //btnについてる.activeはずす
     event.preventDefault();
-    //▲デフォルトのイベントをキャンセル
-    if(state == false) {
-      scrollpos = $(window).scrollTop();
-      $('#menu-bar').toggleClass('active');
-      $('#nav').fadeToggle(500);
-      $('body').toggleClass('fixed').css({'top': -scrollpos});
-      state = true;
-    } else {
-      $('body').toggleClass('fixed').css({'top': 0});
-      window.scrollTo( 0 , scrollpos );
-      $('#menu-bar').toggleClass('active');
-      $('#nav').fadeToggle();
-      state = false;
-    }
   });
-  
-  
+
 });
   
-
-
-//navの中のabout押した時
 
 /*--------------------------------
   * スクロールでフェードイン
@@ -103,10 +94,10 @@ var entryBtn = $('#entry-btn');
 entryBtn.hide();
 //最初は非表示
 
-$(window).scroll(function(){
-  if($(this).scrollTop() > 550){
+$(window).scroll(function () {
+  if ($(this).scrollTop()>550){
     entryBtn.fadeIn(500);
-  }else{
+  } else {
     entryBtn.fadeOut(500);
   }
 });
@@ -121,11 +112,11 @@ $(function () {
   var targetFactor = 0.4;
   var windowH = $(window).height();
   var scrollYStart1 = targetPosOT1 - windowH;
-  $(window).on('scroll',function(){
+  $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop();
-    if(scrollY > scrollYStart1){
+    if (scrollY > scrollYStart1){
       target1.css('background-position-y', (scrollY - targetPosOT1) * targetFactor + 'px');
-    }else{
+    } else {
       target1.css('background-position','center top');
     }
   });
@@ -136,22 +127,22 @@ $(function () {
 /*--------------------------------
   * 講師紹介more
 ---------------------------------*/
-$(function(){
-  $(".readmore-01").click(function() {
+$(function () {
+  $(".readmore-01").click(function () {
     $(this).toggleClass("on-click");
     $(".hide-text_01").slideToggle(1000);
   });
 });
 
-$(function(){
-  $(".readmore-02").click(function() {
+$(function () {
+  $(".readmore-02").click(function () {
     $(this).toggleClass("on-click");
     $(".hide-text_02").slideToggle(1000);
   });
 });
 
-$(function(){
-  $(".readmore-03").click(function() {
+$(function () {
+  $(".readmore-03").click(function () {
     $(this).toggleClass("on-click");
     $(".hide-text_03").slideToggle(1000);
   });
@@ -162,12 +153,12 @@ $(function(){
 /*--------------------------------
   * ページ内リンク位置調整
 ---------------------------------*/
-$(function(){
+$(function () {
 
   $('a[href^="#"]').not('#menu-bar').click(function () {
     var adjust = -80;// 移動先を下にずらす
     var speed = 500; // ミリ秒 // スクロールの速度
-    var href= $(this).attr('href');
+    var href = $(this).attr('href');
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top + adjust;
     $('body,html').animate({scrollTop:position}, speed, 'swing');
@@ -192,8 +183,8 @@ $(function(){
 /*--------------------------------
   * faqアコーディオン
 ---------------------------------*/
-$(function (){
-  $('.js-accordion-title').click(function() {
+$(function () {
+  $('.js-accordion-title').click(function () {
     event.preventDefault();
     /*クリックでコンテンツを開閉*/
     $(this).next().slideToggle(200);
