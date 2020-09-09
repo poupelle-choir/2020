@@ -82,6 +82,10 @@
   position: relative;
   right:-2px;
 }
+#part-1 , #part-2 , #part-3{
+  padding-top: 100px;
+  margin-top: -100px;
+}
 /*--------------------------------
 * how to
 ---------------------------------*/
