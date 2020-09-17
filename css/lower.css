@@ -17,8 +17,30 @@
 * workshop
 ---------------------------------*/
 /*ws日程*/
-#ws-0926 , #ws-0927 , #ws-1003 , #ws-1004 , #ws-1010 , #ws-1011 , #ws-1017 {
+#ws-0912 , #ws-0913 , #ws-0926 , #ws-0927 , #ws-1003 , #ws-1004 , #ws-1010 , #ws-1011 , #ws-1017 {
   display: block;
+}
+.ws-finish{
+  background: rgba(51,51,51,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.ws-finish p{
+  display: inline-block;
+  background-color: #fff;
+  font-size:2rem;
+  padding: 10px 15px;
+  font-weight: 500;
+  opacity: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 .ws-day_wrap{
