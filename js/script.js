@@ -94,13 +94,26 @@ var entryBtn = $('#entry-btn');
 entryBtn.hide();
 //最初は非表示
 
-$(window).scroll(function () {
-  if ($(this).scrollTop()>550){
-    entryBtn.fadeIn(500);
-  } else {
-    entryBtn.fadeOut(500);
+
+$(function(){
+  var w = $(window).width();
+  var x = 1023;
+  if(w <= x){
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop()>550){
+        entryBtn.fadeIn(500);
+      } else {
+        entryBtn.fadeOut(500);
+      }
+    });
+  
+  }else{
+    entryBtn.hide();
   }
+  
 });
+
 
 
 /*--------------------------------
