@@ -1431,6 +1431,9 @@ button.readmore:hover::after {
   .flow-text{
     padding-left: 100px;
   }
+  .flow-list::before{
+    left: 40px;
+  }
   /*--------------------------------
   * workshop
   ---------------------------------*/
@@ -1501,15 +1504,6 @@ button.readmore:hover::after {
 
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
