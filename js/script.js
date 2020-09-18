@@ -59,16 +59,6 @@ $('#menu-bar').on('click', function () {
   }
 });
 
-
-$(function () {
-//navの中のabout押した時
-  $("#message-link").on('click', function () {
-    $('#nav').fadeToggle(); //開いているnav閉じる
-    $('#menu-bar').toggleClass('active'); //btnについてる.activeはずす
-    event.preventDefault();
-  });
-
-});
   
 
 /*--------------------------------
@@ -97,8 +87,8 @@ entryBtn.hide();
 
 $(function(){
   var w = $(window).width();
-  var x = 1023;
-  if(w <= x){
+  var x = 1024;
+  if(w < x){
 
     $(window).scroll(function () {
       if ($(this).scrollTop()>550){
@@ -112,6 +102,25 @@ $(function(){
     entryBtn.hide();
   }
   
+});
+
+
+$(function(){
+  var w = $(window).width();
+  var x = 1024;
+  if(w < x){
+
+    //navの中のabout押した時
+    $("#message-link").on('click', function () {
+      $('#nav').fadeToggle(); //開いているnav閉じる
+      $('#menu-bar').toggleClass('active'); //btnについてる.activeはずす
+      event.preventDefault();
+    });
+    
+  }else{
+  }
+
+
 });
 
 
@@ -178,19 +187,6 @@ $(function () {
     return false;
   });
 });
-
-
-//$(window).on('load', function() {
-//  var url = $(location).attr('href');
-//  if(url.indexOf("?id=") != -1){
-//    var id = url.split("?id=");
-//    var $target = $('#' + id[id.length - 1]);
-//    if($target.length){
-//      var pos = $target.offset().top;
-//      $("html, body").animate({scrollTop:pos}, 1500);
-//    }
-//  }
-//});
 
 
 /*--------------------------------
